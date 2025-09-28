@@ -149,13 +149,15 @@ class CustomerController extends Controller
     {
         try {
             $customer = Customer::findOrFail($id);
+            $oldStatus = $customer->status;
+
             $customer->name  = $request->name;
             $customer->email = $request->email;
             $customer->phone = $request->phone;
             $customer->status = $request->status;
             $customer->save();
 
-            if (isset($request->status) && $request->status == 'LOYAL CUSTOMER') {
+            if ($oldStatus !== 'LOYAL CUSTOMER' && $request->status === 'LOYAL CUSTOMER') {
                 $details = [
                     'title' => 'Halo, ' . $request->name,
                     'message' => 'Sahabat setia toko kami. Rasakan terus manfaat dan potongan harga saat berbelanja di toko kami. Husus buat kamu gunakan kode promo "MAKINUNTUNG" untuk mendapatkan diskon 20%.'
@@ -168,7 +170,7 @@ class CustomerController extends Controller
 
                 $telegram->sendMessage([
                     'chat_id' => env('TELEGRAM_CHAT_ID'),
-                    'text'    => "🔄 Status Customer Diperbarui!\n\n"
+                    'text'    => "🔄 Status Pelanggan Diperbarui!\n\n"
                         . "🆔 ID: {$customer->user_id}\n"
                         . "👤 Nama: {$customer->name}\n"
                         . "📧 Email: {$customer->email}\n"
@@ -199,7 +201,6 @@ class CustomerController extends Controller
                 ));
 
                 curl_exec($curl);
-
                 curl_close($curl);
             }
 
