@@ -95,7 +95,6 @@ class CustomerController extends Controller
                     . "👤 Nama: {$customer->name}\n"
                     . "📧 Email: {$customer->email}\n"
                     . "🎖️ Status: NEW CUSTOMER\n\n"
-                    . "Terima kasih telah mendaftar! 🎉"
             ]);
 
             $token = env('WHATSAPP_TOKEN');
@@ -174,7 +173,6 @@ class CustomerController extends Controller
                         . "👤 Nama: {$customer->name}\n"
                         . "📧 Email: {$customer->email}\n"
                         . "🎖️ Status: LOYAL CUSTOMER\n\n"
-                        . "Terima kasih atas loyalitas Anda! 🎉"
                 ]);
 
                 $token = env('WHATSAPP_TOKEN');
