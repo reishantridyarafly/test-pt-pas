@@ -1,4 +1,4 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p> x
+<p align="center"><a href="javascript:void(0);" target="_blank"><img src="https://recruitment-pas.web.app/assets/logo-pas-with-text.a23ed92b.png" width="400" alt="Laravel Logo"></a></p> x
 
 # Panduan Instalasi Project Laravel
 
@@ -82,9 +82,15 @@ Sebelum memulai, pastikan sistem Anda memenuhi persyaratan berikut:
 ### 5. Menjalankan Project
 
 1. Jalankan server Laravel:
+
     ```bash
     php artisan serve
+
+    php artisan queue:work
+
+    php artisan schedule:work
     ```
+
 2. Buka browser dan akses:
     ```
     http://localhost:8000
