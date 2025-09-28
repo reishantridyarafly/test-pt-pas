@@ -1,4 +1,4 @@
-<p align="center"><a href="javascript:void(0);" target="_blank"><img src="https://recruitment-pas.web.app/assets/logo-pas-with-text.a23ed92b.png" width="400" alt="Laravel Logo"></a></p> x
+<p align="center"><a href="javascript:void(0);" target="_blank"><img src="https://recruitment-pas.web.app/assets/logo-pas-with-text.a23ed92b.png" width="400" alt="Laravel Logo"></a></p>
 
 # Panduan Instalasi Project Laravel
 
@@ -46,6 +46,8 @@ Sebelum memulai, pastikan sistem Anda memenuhi persyaratan berikut:
 3. Sesuaikan konfigurasi database di file `.env`:
 
     ```
+    APP_NAME="PT. PAS"
+    
     DB_CONNECTION=mysql
     DB_HOST=127.0.0.1
     DB_PORT=3306
@@ -53,10 +55,19 @@ Sebelum memulai, pastikan sistem Anda memenuhi persyaratan berikut:
     DB_USERNAME=root
     DB_PASSWORD=
 
-    WHATSAPP_TOKEN="nnLvMmoBfAbToVq49snc"
+    MAIL_MAILER=smtp
+    MAIL_HOST=smtp.gmail.com
+    MAIL_PORT=587
+    MAIL_USERNAME=<your-gmail-address>
+    MAIL_PASSWORD=<your-gmail-app-password>
+    MAIL_ENCRYPTION=tls
+    MAIL_FROM_ADDRESS="<your-gmail-address>"
+    MAIL_FROM_NAME="${APP_NAME}"
 
-    TELEGRAM_BOT_TOKEN="8245021275:AAH6gBLGO0f34zxe0me84DcBMPp8O2gqyuM"
-    TELEGRAM_CHAT_ID="7948845453"
+    WHATSAPP_TOKEN="<your-whatsapp-api-token>"
+
+    TELEGRAM_BOT_TOKEN="<your-telegram-bot-token>"
+    TELEGRAM_CHAT_ID="<your-telegram-chat-id>"
     ```
 
 ### 3. Install Dependencies
