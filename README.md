@@ -12,7 +12,7 @@ Sebelum memulai, pastikan sistem Anda memenuhi persyaratan berikut:
 -   Git
 -   XAMPP/Laragon/Server lokal lainnya
 -   Text editor (VS Code/Sublime Text/dll)
--   MySQL/MariaDB
+-   MySQL
 
 ## Langkah-langkah Instalasi dan Pengaturan
 
