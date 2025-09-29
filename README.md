@@ -43,7 +43,7 @@ Sebelum memulai, pastikan sistem Anda memenuhi persyaratan berikut:
     ```bash
     php artisan key:generate
     ```
-3. Sesuaikan konfigurasi database di file `.env`:
+3. Sesuaikan konfigurasi di file `.env`:
 
     ```
     APP_NAME="PT. PAS"
