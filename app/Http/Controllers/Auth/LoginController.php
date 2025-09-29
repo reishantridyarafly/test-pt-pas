@@ -31,7 +31,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    // protected $redirectTo = '/home';
 
     /**
      * Create a new controller instance.
@@ -43,12 +43,6 @@ class LoginController extends Controller
     {
         $credentials = $request->only('email', 'password');
         $user = User::where('email', $credentials['email'])->first();
-
-        if (!$user) {
-            return response()->json(['errors' => [
-                'email' => ['Email tidak tersedia.']
-            ]], 422);
-        }
 
         if ($user && Hash::check($credentials['password'], $user->password)) {
             Auth::loginUsingId($user->id);
